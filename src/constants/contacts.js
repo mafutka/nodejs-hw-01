@@ -4,8 +4,9 @@ export const PATH_DB = path.join(process.cwd(),'src', 'db', 'db.json');
 
 
 
+console.log("path-to-file", PATH_DB);
 
-// console.log("path-to-file", PATH_DB);
+
 
 
 // У файлі src/constants/contacts.js є оголошена константа PATH_DB. 
