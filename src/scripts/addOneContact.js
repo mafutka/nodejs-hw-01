@@ -1,6 +1,15 @@
-export const addOneContact = async () => {};
+import { readContacts } from "../utils/readContacts.js";
+import { writeContacts } from "../utils/writeContacts.js";
 
-addOneContact();
+export const addOneContact = async (newContact) => {
+    const contacts = await readContacts();
+    contacts.push(newContact);
+    await writeContacts(contacts);
+    
+
+};
+
+addOneContact('MAsha Skobeleva');
 
 // У файлі src/scripts/addOneContact.js опишіть функцію addOneContact. 
 // Вона має додавати до масиву у файлі src/db/db.json лише один згенерований контакт. 
